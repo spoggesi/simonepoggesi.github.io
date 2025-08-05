@@ -1,2 +1,2 @@
-# pangboorn2025
+# Pangborn2025
 Pangborn website 2025

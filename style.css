@@ -48,8 +48,10 @@ body {
 }
 
 .main-content {
+  max-width: 100%;
   flex: 1;
-  margin: 0 auto;
+  text-align: justify;
+  max-width: 100%;
 }
 
 .logo {
@@ -181,4 +183,3 @@ main {
     max-width: 100%;
   }
 }
-

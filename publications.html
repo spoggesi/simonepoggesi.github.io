@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dr Simone Poggesi – Sensory Research Officer at Massey University.">
+  <title>Simone Poggesi</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="media/Feast logo_Social.png" type="image/png">
+</head>
+
+<body>
+  <img src="media/MU Feast No tag CMYK.png" alt="Logo" class="logo">
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#media">Media</a></li>
+  </ul>
+</nav>
+
+<div id="publications-list">
+  <!-- ORCID publications will be inserted here -->
+</div>
+
+<script>
+  fetch('orcid_publications.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('publications-list').innerHTML = data;
+    })
+    .catch(error => {
+      console.error('Error loading publications:', error);
+    });
+</script>
+
+</div>
+      <footer>
+        <p>&copy; 2025 Dr Simone Poggesi</p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>

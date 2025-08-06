@@ -1,2 +1,2 @@
-# Pangborn2025
-Pangborn website 2025
+# Simone Poggesi personal page
+Personal page of Simone Poggesi

@@ -1,0 +1,146 @@
+:root {
+  --dark-blue: #0A2240;
+  --blue: #004b8d;
+  --light-blue: #4789C8;
+  --bright-blue: #25AAE1;
+  --gold: #e4a024;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  margin: 40px;
+  background-color: #f4f8fb;
+  color: var(--dark-blue);
+}
+
+.layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.sidebar {
+  flex: 0 0 260px;
+  background-color: #f0f4f9;
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 0.95em;
+  color: var(--dark-blue);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.profile-pic {
+  width: 260px; /* same as sidebar width */
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  max-height: 120px; /* adjust as needed */
+  padding: 5px 0;
+}
+
+h1 {
+  color: var(--blue);
+  text-align: center;
+  font-weight: bold;
+}
+
+h2 {
+  color: var(--bright-blue);
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.article {
+  margin-bottom: 20px;
+}
+
+video {
+  border: 2px solid var(--light-blue);
+  border-radius: 8px;
+  padding: 4px;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: var(--dark-blue);
+}
+
+nav {
+  background-color: var(--blue);
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: inline-flex;
+  gap: 30px;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin-bottom: 40px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

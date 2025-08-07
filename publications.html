@@ -10,6 +10,24 @@
   <link rel="icon" href="media/Feast logo_Social.png" type="image/png">
 </head>
 
+<script>
+  fetch('metrics.json')  // since metrics.json is in the root
+    .then(response => {
+      if (!response.ok) throw new Error('Metrics file not found');
+      return response.json();
+    })
+    .then(data => {
+      document.getElementById('h-index').textContent = data.h_index;
+      document.getElementById('citation-count').textContent = data.citation_count;
+    })
+    .catch(error => {
+      console.error('Failed to load metrics:', error);
+      document.getElementById('h-index').textContent = 'N/A';
+      document.getElementById('citation-count').textContent = 'N/A';
+    });
+</script>
+
+
 <body>
   <img src="media/MU Feast No tag CMYK.png" alt="Logo" class="logo">
 
@@ -19,11 +37,10 @@
     </ul>
   </nav>
 
-  <!-- Metrics section -->
   <section id="metrics" style="padding:1em; background:#f4f4f4; border:1px solid #ccc; margin:1em 0;">
-    <h2>Research Metrics</h2>
-    <p><strong>Google Scholar h-index:</strong> 7</p>
-    <p><strong>Total citations:</strong> 151</p>
+  <h2>Research Metrics</h2>
+  <p><strong>h-index:</strong> <span id="h-index">Loading...</span></p>
+  <p><strong>Total citations:</strong> <span id="citation-count">Loading...</span></p>
   </section>
 
   <div id="publications-list">

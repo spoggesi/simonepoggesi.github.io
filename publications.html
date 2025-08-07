@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Dr Simone Poggesi – Sensory Research Officer at Massey University.">
-  <title>Simone Poggesi</title>
+  <meta name="description" content="Dr Simone Poggesi – Pangborn 2025">
+  <title>Publications</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" href="media/Feast logo_Social.png" type="image/png">
@@ -13,34 +13,37 @@
 <body>
   <img src="media/MU Feast No tag CMYK.png" alt="Logo" class="logo">
 
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href=poster.html">Pangborn Posters</a></li>
-  </ul>
-</nav>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+    </ul>
+  </nav>
 
-<div id="publications-list">
-  <!-- ORCID publications will be inserted here -->
-</div>
+  <!-- Metrics section -->
+  <section id="metrics" style="padding:1em; background:#f4f4f4; border:1px solid #ccc; margin:1em 0;">
+    <h2>Research Metrics</h2>
+    <p><strong>Google Scholar h-index:</strong> 7</p>
+    <p><strong>Total citations:</strong> 151</p>
+  </section>
 
-<script>
-  fetch('orcid_publications.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('publications-list').innerHTML = data;
-    })
-    .catch(error => {
-      console.error('Error loading publications:', error);
-    });
-</script>
-
-</div>
-      <footer>
-        <p>&copy; 2025 Dr Simone Poggesi</p>
-      </footer>
-    </main>
+  <div id="publications-list">
+    <!-- ORCID publications will be inserted here -->
   </div>
+
+  <script>
+    fetch('orcid_publications.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('publications-list').innerHTML = data;
+      })
+      .catch(error => {
+        console.error('Error loading publications:', error);
+      });
+  </script>
+
+  <footer>
+    <p>&copy; 2025 Dr Simone Poggesi</p>
+  </footer>
 </body>
 
 </html>
